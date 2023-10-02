@@ -9,7 +9,7 @@ def Menu_credits():
         print("Author: Nathan Isaac")
         print("Version: Alpha 2.0")
         print("Date: October 2, 2023")
-        print("GitHub Repository:")
+        print("GitHub Repository: https://github.com/Jenavla/Physics-Calculator/tree/main")
         print("Testers: Thomas, Dennis, Rico and Lars")
         print("This calculator is based on the Applied Physics course from the Amsterdam Institute of Applied Sciences")
         user_input = input("Press enter to return to the main menu: ")
