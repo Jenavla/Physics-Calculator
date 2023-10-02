@@ -30,4 +30,4 @@ I would like to thank the testers, including Thomas, Dennis, Rico, and Lars, for
 This calculator is based on the Applied Physics course from the Amsterdam Institute of Applied Sciences.
 
 # License
-This project not licensed
+This project is not licensed
