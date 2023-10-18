@@ -2,10 +2,6 @@
 import Physics_calculator_functions as func
 import logging
 
-""" 
--
-"""
-
 # Function for the credits
 def menu_credits():
     while True:
@@ -21,7 +17,7 @@ def menu_credits():
         user_input = func.log_user_input("Press enter to return to the main menu: ")
         match user_input:
             case _: # Go back to the previous menu
-                func.clear_screen()
+                func.basicfunctions.clear_screen()
                 break 
 
 # Function for the help menu
@@ -32,12 +28,12 @@ def menu_help():
         user_input = func.log_user_input('What do you need help with?\n1. How does this calculator work?\n2. I get an error message, what can I do?\nB to go back\nQ to stop\nInput: ')
         match user_input:
             case 'B'|'b': # Go back to the previous menu
-                func.clear_screen()
+                func.basicfunctions.clear_screen()
                 break  
             case 'Q'|'q': # quit function
-                func.quit_program()
+                func.basicfunctions.quit_program()
             case '1':
-                func.clear_screen()
+                func.basicfunctions.clear_screen()
                 print('In the main menu, you\'ll see a list of options such as Newton equations, Newtonian movement equations, etc.')
                 print('To select an option, type the corresponding number or letter and press Enter.')
                 print('For example, if you want to work on Newton equations, you can type \'1\' and press Enter.')
@@ -48,7 +44,7 @@ def menu_help():
                 print('At any point, you can navigate back to the previous menu by typing \'B\'. This allows you to change your calculation choice or return to the main menu.')
                 print('If you want to exit the program, you can type \'Q\' in the main menu or in most submenus.')
             case '2':
-                func.clear_screen()
+                func.basicfunctions.clear_screen()
                 print('If you get an error, there will be a message displayed explaining what went wrong.')
                 print('Possible error messages:')
                 print('- invalid input: The input you provided was not recognized by the calculator.')
@@ -59,7 +55,7 @@ def menu_help():
                 print('- Logarithm error: You got a zero or a negative number in a logarithm. Check your input values')
                 print('- Root error: You got a zero or negative number in a root. Check your input values')
             case _:
-                func.invalid_input_notrecognized()
+                func.errorhandling.invalid_input_notrecognized()
 
 # Function to handle the menu for newton's equations
 def menu_newton_equations():
@@ -69,18 +65,18 @@ def menu_newton_equations():
         user_input = func.log_user_input('What law of newton would you like to calculate?\n1. newton\'s first law\n2. newton\'s second law\n3. newton\'s third law\nB to go back\nQ to stop\nInput: ')
         match user_input:
             case 'B'|'b': # Go back to the previous menu
-                func.clear_screen()
+                func.basicfunctions.clear_screen()
                 break  
             case 'Q'|'q': # quit function
-                func.quit_program()
+                func.basicfunctions.quit_program()
             case '1':
-                func.newtons_first_law()
+                func.newtons_laws.newtons_first_law()
             case '2':
-                func.newtons_second_law()
+                func.newtons_laws.newtons_second_law()
             case '3':
-                func.newtons_third_law()            
+                func.newtons_laws.newtons_third_law()            
             case _:
-                func.invalid_input_notrecognized()
+                func.errorhandling.invalid_input_notrecognized()
 
 # Function to handle the menu for Force equations
 def menu_force_equations():
@@ -90,24 +86,24 @@ def menu_force_equations():
         user_input = func.log_user_input('What force would you like to calculate?\n1. Gravity\n2. Air resistance\n3. Static friction\n4. Dynamic friction\n5. Spring force\n6. Centripetal force\nB to go back\nQ to stop\nInput: ')
         match user_input:
             case 'B'|'b': # Go back to the previous menu
-                func.clear_screen()
+                func.basicfunctions.clear_screen()
                 break  
             case 'Q'|'q': # quit function
-                func.quit_program()
+                func.basicfunctions.quit_program()
             case '1':
-                func.gravity()
+                func.force.gravity()
             case '2':
-                func.air_resistance()
+                func.force.air_resistance()
             case '3':
-                func.friction_static()
+                func.force.friction_static()
             case '4':
-                func.friction_dynamic()
+                func.force.friction_dynamic()
             case '5':
-                func.spring_force() 
+                func.force.spring_force() 
             case '6':
-                func.centripedal_force()
+                func.force.centripedal_force()
             case _:
-                func.invalid_input_notrecognized()        
+                func.errorhandling.invalid_input_notrecognized()        
 
 # Function to handle the menu for energy equations        
 def menu_energy_equations():
@@ -117,18 +113,18 @@ def menu_energy_equations():
             user_input = func.log_user_input('What energy would you like to calculate?\n1. Gravitational potential energy\n2. Kinetic energy\n3. Kinetic rotation energy\nB to go back\nQ to stop\nInput: ')
             match user_input:
                 case 'B'|'b': # Go back to the previous menu
-                    func.clear_screen()
+                    func.basicfunctions.clear_screen()
                     break  
                 case 'Q'|'q': # quit function
-                    func.quit_program()
+                    func.basicfunctions.quit_program()
                 case '1':
-                    func.gravitational_potential_energy()
+                    func.energy.gravitational_potential_energy()
                 case '2':
-                    func.kinetic_energy()
+                    func.energy.kinetic_energy()
                 case '3':
-                    func.kinetic_energy_rotation()
+                    func.energy.kinetic_energy_rotation()
                 case _:
-                    func.invalid_input_notrecognized()        
+                    func.errorhandling.invalid_input_notrecognized()        
                 
 # Function to handle the menu for thermodynamica
 def menu_thermodynamic_equations():
@@ -138,28 +134,28 @@ def menu_thermodynamic_equations():
             user_input = func.log_user_input('What would you like to calculate?\n1. 1D heat expansion\n2. 2D heat expansion\n3. 3D heat expansion\n4. Isobaric work\n5. Isotherm work\n6. First law\nB to go back\nQ to stop\nInput: ')
             match user_input:
                 case 'B'|'b': # Go back to the previous menu
-                    func.clear_screen()
+                    func.basicfunctions.clear_screen()
                     break  
                 case 'Q'|'q': # quit function
-                    func.quit_program()
+                    func.basicfunctions.quit_program()
                 case '1':
-                    func.length_expansion()
+                    func.thermodynamics.length_expansion()
                 case '2':
-                    func.area_expansion()
+                    func.thermodynamics.area_expansion()
                 case '3':
-                    func.volume_expansion()
+                    func.thermodynamics.volume_expansion()
                 case '4':
-                    func.isobaric_heat_work()
+                    func.thermodynamics.isobaric_heat_work()
                 case '5':
-                    func.isotherm_heat_work()
+                    func.thermodynamics.isotherm_heat_work()
                 case '6':
-                    func.thermo_first_law()
+                    func.thermodynamics.thermo_first_law()
                 case _:
-                    func.invalid_input_notrecognized()        
+                    func.errorhandling.invalid_input_notrecognized()        
                            
 # Main menu function for the entire program
 def main_menu():
-    func.clear_screen()
+    func.basicfunctions.clear_screen()
     while True:
         logging.info("main_menu() was called")
         # Explanation of how the program works
@@ -176,56 +172,56 @@ def main_menu():
 
             # quit the program
             case 'Q'|'q':
-                func.quit_program()
+                func.basicfunctions.quit_program()
             
             # Help menu
             case 'H'|'h':
-                func.clear_screen()
+                func.basicfunctions.clear_screen()
                 menu_help()
             
             # newton equations
             case '1':
-                func.clear_screen()
+                func.basicfunctions.clear_screen()
                 menu_newton_equations()
                         
             # newtonian movement equations
             case '2':
-                func.clear_screen()
-                func.newtonian_movement()
+                func.basicfunctions.clear_screen()
+                func.movement.newtonian_movement()
                 
             # Force equations
             case '3':
-                func.clear_screen()
+                func.basicfunctions.clear_screen()
                 menu_force_equations()
                 
             # Energy equations
             case '4':
-                func.clear_screen()
+                func.basicfunctions.clear_screen()
                 menu_energy_equations()
             
             # Momentum equations
             case '5':
-                func.clear_screen()
-                func.momentum()
+                func.basicfunctions.clear_screen()
+                func.momentum_impulse.momentum()
                 
             # Impulse equations
             case '6':
-                func.clear_screen()
-                func.impulse()
+                func.basicfunctions.clear_screen()
+                func.momentum_impulse.impulse()
               
             # Thermodynamic equations
             case '7':
-                func.clear_screen()
+                func.basicfunctions.clear_screen()
                 menu_thermodynamic_equations()
             
             # Credits    
             case 'c'|'C':
-                func.clear_screen()
+                func.basicfunctions.clear_screen()
                 menu_credits()    
                 
             # invalid input
             case _:
-                func.invalid_input_notrecognized()
+                func.errorhandling.invalid_input_notrecognized()
 
 # Start the program by calling the main menu function
 if __name__ == "__main__":
