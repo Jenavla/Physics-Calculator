@@ -31,5 +31,15 @@ Version Beta 2.0:
 - Fixed a naming issue with variables in the code
 
 Version Beta 2.1:
+- Fixed an issue where mass could be negative in some calculatopns
+- Fixed an issue where roots and logarithm could contain negative numbers
+
+Version 1.0:
+- Made the code more efficiënt
+- Several bugfixes
+- Updated the help menu to explain the program in more detail
+- Fixed a naming issue with variables in the code
+
+Version Beta 2.1:
 - Fixed an issue where mass could be negative in some calculations
 - Fixed an issue where roots and logarithm could contain negative numbers
