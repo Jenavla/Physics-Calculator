@@ -23,8 +23,8 @@ Contributions to this project are welcome. If you have suggestions for improveme
 
 # Credits
 Author: Nathan Isaac
-Version: Alpha 2.0
-Date: October 2, 2023
+Version: Version 1.0
+Date: October 18, 2023
 # Acknowledgments
 I would like to thank the testers, including Thomas, Dennis, Rico, and Lars, for their valuable feedback and contributions to this project. 
 This calculator is based on the Applied Physics course from the Amsterdam Institute of Applied Sciences.
